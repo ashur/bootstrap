@@ -5,4 +5,4 @@
 ./cask.sh
 
 # App Preferences
-./apps/coda.sh
+./apps/safari.sh
