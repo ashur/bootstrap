@@ -1,7 +1,7 @@
 # --
-# Install apps using Cask
+# Install apps using Cask, symlink to /Applications
 # --
-brew cask install bartender
-brew cask install moom
-brew cask install coda
-brew cask install sublime-text
+brew cask install --appdir=/Applications bartender
+brew cask install --appdir=/Applications moom
+brew cask install --appdir=/Applications coda
+brew cask install --appdir=/Applications sublime-text
