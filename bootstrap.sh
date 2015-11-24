@@ -6,3 +6,4 @@
 
 # App Preferences
 ./apps/safari.sh
+./apps/tweetbot.sh
