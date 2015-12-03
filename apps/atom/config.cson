@@ -1,0 +1,20 @@
+"*":
+  "exception-reporting":
+    userId: "3cc37317-ce99-bb67-e918-ebde4d84a79c"
+  welcome:
+    showOnStartup: false
+  editor:
+    fontSize: 12
+    invisibles: {}
+    scrollPastEnd: true
+    showIndentGuide: true
+    softTabs: false
+    tabLength: 4
+    tabType: "hard"
+  core:
+    projectHome: "~/Developer"
+  "terminal-plus":
+    core: {}
+    style:
+      fontFamily: "Menlo"
+  "tree-view": {}

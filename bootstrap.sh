@@ -8,5 +8,6 @@ cd "`pwd`/`dirname $0`"
 ./cask.sh
 
 # App Preferences
+./apps/atom.sh
 ./apps/safari.sh
 ./apps/tweetbot.sh
