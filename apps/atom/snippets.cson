@@ -19,6 +19,42 @@
 # If you are unfamiliar with CSON, you can read more about it in the
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
+'.source.gfm':
+	'Build Details':
+		'prefix': 'bbbuild'
+		'body': """
+|				| 				|
+| ---			| :--			|
+| **Date**		| ${1:}	|
+| **Commit**	| ${2:}		|
+"""
+
+'.source.js':
+	'Log':
+		'prefix': 'lp'
+		'body': 'output.${1:debug}( ${2:} );'
+
+	'Print Readable':
+		'prefix': 'lr'
+		'body': 'Automation.getDisplayString( ${1:} )'
+
+	'Method Parameter':
+		'prefix': '@param'
+		'body':	'@param	${1:type}	$${2:name}'
+
+	'Class Method':
+		'prefix': 'method'
+		'body': """
+		/**
+		 * ${2:@param}
+		 * @return	${3:void}
+		 */
+		function ${1:}()
+		{
+
+		}
+"""
+
 '.source.php':
 	'Line Print':
 		'prefix': 'lp'
@@ -52,5 +88,68 @@
 		 * @var	${1:type}
 		 */
 		${2:protected} $${3:name};
+
+"""
+
+'.text':
+	'Bug Report: OS X':
+		'prefix': ':osx'
+		'body': """* *OS X*: 10.11
+* *Commit* — ${4:}
+"""
+
+	'Bug Report: iOS + Device':
+		'prefix': ':ios'
+		'body': """* *Device*: ${2:}
+* *iOS*: 9.${3:}
+* *Commit* — ${4:}
+"""
+
+	'Bug Report':
+		'prefix': 'bug'
+		'body': """
+h2. Configuration
+
+:${1:}
+
+h2. Steps
+
+
+
+h2. Expected
+
+
+
+h2. Actual
+
+
+h2. Frequency
+
+* Repeatable
+* Non-repeatable
+* Situational
+* Unknown
+* Always
+* Often
+* Sometimes
+* Once
+
+h2. Severity
+
+* Crasher
+* Blocker
+* Critical
+* Major
+* Minor
+* Trivial
+* Enhancement
+
+h2. Workaround
+
+
+
+h2. Notes
+
+
 
 """
