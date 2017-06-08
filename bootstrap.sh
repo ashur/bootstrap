@@ -3,6 +3,7 @@ cd "`dirname $0`"
 
 ./osx.sh
 ./git.sh
+./brew.zsh
 ./php.sh
 ./oh-my-zsh.sh
 ./cask.sh
