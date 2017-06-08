@@ -4,7 +4,7 @@ cd "`dirname $0`"
 ./osx.sh
 ./git.sh
 ./php.sh
-./dotfiles.sh
+./oh-my-zsh.sh
 ./cask.sh
 
 # App Preferences
