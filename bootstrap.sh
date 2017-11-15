@@ -1,9 +1,10 @@
-# cd to the proper directory so we can work relatively
-cd "`dirname $0`"
+# cd to this directory to work relatively
+BOOTSTRAP=$(realpath $(dirname $0))
+cd $BOOTSTRAP
 
-./osx.sh
+./macos.sh
 ./git.sh
-./brew.zsh
+./homebrew.sh
 ./php.sh
 ./oh-my-zsh.sh
 ./cask.sh
