@@ -21,6 +21,7 @@ fi
 if [ ! -L "$ZSHRC" ]; then
 	echo "Linking ~/.zshrc"
 	ln -s $SCRIPTPATH/oh-my-zsh/.zshrc $ZSHRC
+	ln -s $SCRIPTPATH/assets/oh-my-zsh/.zshrc $ZSHRC
 fi
 
 if [ $SHELL != "/bin/zsh" ]; then
