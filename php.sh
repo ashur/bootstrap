@@ -2,4 +2,4 @@
 # PHP
 # --
 brew tap homebrew/homebrew-php
-brew install php56
+brew install php71
