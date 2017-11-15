@@ -7,8 +7,3 @@ cd "`dirname $0`"
 ./php.sh
 ./oh-my-zsh.sh
 ./cask.sh
-
-# App Preferences
-./apps/atom.sh
-./apps/safari.sh
-./apps/tweetbot.sh
