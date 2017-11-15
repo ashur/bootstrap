@@ -4,6 +4,14 @@
 
 echo "\nHomebrew ***********************************************************************\n"
 
+which brew &>/dev/null
+if [ $? -ne 0 ]; then
+	echo "- Installing Homebrew..."
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+else
+	echo "✓ Homebrew already installed"
+fi
+
 brew list coreutils &>/dev/null
 if [ $? -ne 0 ]; then
 	echo "- Installing coreutils..."

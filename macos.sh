@@ -40,14 +40,4 @@ else
 	echo "✓ Command Line Tools already installed"
 fi
 
-# --
-# homebrew
-# --
-which brew &>/dev/null
-if [ $? -ne 0 ]; then
-	echo "- Installing Homebrew..."
-	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-else
-	echo "✓ Homebrew already installed"
-fi
 echo
