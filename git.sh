@@ -7,6 +7,9 @@ echo "\nGit config *************************************************************
 git config --global user.name 'Ashur Cabrera'
 echo "✓ user.name"
 
+git config --global push.recurseSubmodules check
+echo "✓ push.recurseSubmodules"
+
 # Aliases
 git config --global alias.hist 'log --pretty=oneline'
 echo "✓ alias.hist"
