@@ -1,43 +1,44 @@
 # --
-# macOS preferences
+# macOS
 # --
 
-echo "\nmacOS **************************************************************************\n"
-
-## Disable drop shadows on screenshots
-defaults write com.apple.screencapture disable-shadow -bool true
-killall SystemUIServer
-
-# --
-# Directories
-# --
-## ~/Developer
-DIRDEV="${HOME}/Developer"
-if [ ! -d $DIRDEV ]; then
-	echo "- Creating ${DIRDEV}..."
-	mkdir $DIRDEV
-else
-	echo "✓ ${DIRDEV} already exists"
-fi
-
-## ~/Sites
-DIRSITES="${HOME}/Sites"
-if [ ! -d $DIRSITES ]; then
-	echo "- Creating ${DIRSITES}..."
-	mkdir $DIRSITES
-else
-	echo "✓ ${DIRSITES} already exists"
-fi
+source ./assets/utils.sh
+header "macOS"
 
 # --
 # Command Line Tools
 # --
 which xcode-select &>/dev/null
 if [ $? -ne 0 ]; then
-	echo "- Installing Command Line Tools..."
+	task_doing "Command Line Tools" "Installing"
 	xcode-select --install
 else
-	echo "✓ Command Line Tools already installed"
+	task_done "Command Line Tools" "already installed"
 fi
+
+# --
+# Preferences
+# --
+## Disable drop shadows on screenshots
+defaults write com.apple.screencapture disable-shadow -bool true
+killall SystemUIServer
+task_done "Screenshot Drop Shadows" "disabled"
+
+# --
+# Directories
+# --
+function make_directory()
+{
+	DIRNAME=$1
+	if [ ! -d $DIRNAME ]; then
+		task_doing $DIRNAME "Creating"
+		mkdir $DIRNAME
+	else
+		task_done $DIRNAME "already exists"
+	fi
+}
+
+make_directory "${HOME}/Developer"
+make_directory "${HOME}/Sites"
 
 echo

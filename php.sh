@@ -2,24 +2,25 @@
 # PHP
 # --
 
-echo "\nPHP ****************************************************************************\n"
+source ./assets/utils.sh
+header "PHP"
 
 PHPCASK="homebrew/php"
 PHPFORMULA=php71
 
 brew tap | grep "${PHPCASK}" &>/dev/null
 if [ $? -ne 0 ]; then
-	echo "- Tapping ${PHPCASK}..."
-	brew tap ${PHPCASK}
+	task_doing $PHPCASK "Tapping"
+	brew tap $PHPCASK
 else
-	echo "✓ ${PHPCASK} already tapped"
+	task_done $PHPCASK "already tapped"
 fi
 
 brew list $PHPFORMULA &>/dev/null
 if [ $? -ne 0 ]; then
-	echo "- Installing ${PHPFORMULA}..."
+	task_doing $PHPFORMULA "Installing"
 	brew install $PHPFORMULA
 else
-	echo "✓ ${PHPFORMULA} already installed"
+	task_done $PHPFORMULA "already installed"
 fi
 echo

@@ -2,30 +2,31 @@
 # Homebrew
 # --
 
-echo "\nHomebrew ***********************************************************************\n"
+source ./assets/utils.sh
+header "Homebrew"
 
 which brew &>/dev/null
 if [ $? -ne 0 ]; then
-	echo "- Installing Homebrew..."
+	task_doing "Installing ${COLOR_WHITE}Homebrew${COLOR_NONE}..."
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
-	echo "✓ Homebrew already installed"
+	task_done "Homebrew" "already installed"
 fi
 
 brew list coreutils &>/dev/null
 if [ $? -ne 0 ]; then
-	echo "- Installing coreutils..."
+	task_doing "coreutils" "Installing"
 	brew install coreutils
 else
-	echo "✓ coreutils already installed"
+	task_done "coreutils" "already installed"
 fi
 
 brew list grc &>/dev/null
 if [ $? -ne 0 ]; then
-	echo "- Installing grc..."
+	task_doing "grc" "Installing"
 	brew install grc
 else
-	echo "✓ grc already installed"
+	task_done "grc" "already installed"
 fi
 
 echo

@@ -2,21 +2,23 @@
 # Git preferences
 # --
 
-echo "\nGit config *********************************************************************\n"
+source ./assets/utils.sh
+header "Git Config"
 
 git config --global user.name 'Ashur Cabrera'
-echo "✓ user.name"
+task_done "user.name"
 
 git config --global push.recurseSubmodules check
-echo "✓ push.recurseSubmodules"
+task_done "push.recurseSubmodules"
 
 git config --global status.submoduleSummary true
-echo "✓ status.submoduleSummary"
+task_done "status.submoduleSummary"
 
 # Aliases
 git config --global alias.hist 'log --pretty=oneline'
-echo "✓ alias.hist"
+task_done "alias.hist"
+
 git config --global alias.hash 'log --pretty=format:"%h" -n 1'
-echo "✓ alias.hash"
+task_done "alias.hash"
 
 echo

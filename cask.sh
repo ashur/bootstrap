@@ -2,30 +2,25 @@
 # Install apps using Cask, symlink to /Applications
 # --
 
-echo "\nHomebrew Cask ******************************************************************\n"
+source ./assets/utils.sh
+header "Homebrew: Cask"
 
-# brew cask list bartender &>/dev/null
-# if [ $? -ne 0 ]; then
-# 	echo "- Installing Bartender..."
-# 	brew cask install --appdir=/Applications bartender
-# else
-# 	echo "✓ Bartender already installed"
-# fi
+function install_cask()
+{
+	APP_FORMULA="$1"
+	APP_NAME="$2"
 
-brew cask list github &>/dev/null
-if [ $? -ne 0 ]; then
-	echo "- Installing GitHub Desktop..."
-	brew cask install --appdir=/Applications github
-else
-	echo "✓ GitHub Desktop already installed"
-fi
+	brew cask list $APP_FORMULA &>/dev/null
+	if [ $? -ne 0 ]; then
+		task_doing "${APP_NAME}" "Installing"
+		brew cask install --appdir=/Applications "${APP_FORMULA}"
+	else
+		task_done "${APP_NAME}" "already installed"
+	fi
+}
 
-brew cask list moom &>/dev/null
-if [ $? -ne 0 ]; then
-	echo "- Installing Moom..."
-	brew cask install --appdir=/Applications moom
-else
-	echo "✓ Moom already installed"
-fi
+# install_cask bartender "Bartender 3"
+install_cask github "Github Desktop"
+install_cask moom "Moom"
 
 echo
