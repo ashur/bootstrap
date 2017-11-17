@@ -11,5 +11,6 @@ header "PHP"
 # -----------------
 brew_tap_keg "homebrew/php"
 brew_install_formula "php71"
+brew_install_formula "composer"
 
 echo
