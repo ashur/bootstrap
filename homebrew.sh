@@ -7,6 +7,8 @@ cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
 source ./assets/utils.sh
 header "Homebrew"
 
+# Homebrew
+# --------
 which brew &>/dev/null
 if [ $? -ne 0 ]; then
 	task_doing "Installing ${COLOR_WHITE}Homebrew${COLOR_NONE}..."
@@ -15,20 +17,15 @@ else
 	task_done "Homebrew" "already installed"
 fi
 
-brew list coreutils &>/dev/null
-if [ $? -ne 0 ]; then
-	task_doing "coreutils" "Installing"
-	brew install coreutils
-else
-	task_done "coreutils" "already installed"
-fi
+# Formulae and Kegs
+# -----------------
+brew_install_formula "coreutils"
+brew_install_formula "grc"
 
-brew list grc &>/dev/null
-if [ $? -ne 0 ]; then
-	task_doing "grc" "Installing"
-	brew install grc
-else
-	task_done "grc" "already installed"
-fi
+brew_tap_keg "ashur/fig"
+brew_tap_keg "ashur/pug"
+
+brew_install_formula "fig"
+brew_install_formula "pug"
 
 echo

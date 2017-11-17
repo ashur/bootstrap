@@ -7,6 +7,8 @@ cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
 source ./assets/utils.sh
 header "Homebrew: Cask"
 
+# Functions
+# ---------
 function install_cask()
 {
 	APP_FORMULA="$1"
@@ -21,7 +23,8 @@ function install_cask()
 	fi
 }
 
-# install_cask bartender "Bartender 3"
+# Casks
+# -----
 install_cask github "Github Desktop"
 install_cask moom "Moom"
 

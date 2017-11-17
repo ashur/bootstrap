@@ -7,20 +7,23 @@ cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
 source ./assets/utils.sh
 header "Git Config"
 
-git config --global user.name 'Ashur Cabrera'
-task_done "user.name"
+# Functions
+# ---------
+function git_config()
+{
+	GIT_KEY="$1"
+	GIT_VALUE="$2"
 
-git config --global push.recurseSubmodules check
-task_done "push.recurseSubmodules"
+	git config --global "${GIT_KEY}" "${GIT_VALUE}"
+	task_done "${GIT_KEY}"
+}
 
-git config --global status.submoduleSummary true
-task_done "status.submoduleSummary"
-
-# Aliases
-git config --global alias.hist 'log --pretty=oneline'
-task_done "alias.hist"
-
-git config --global alias.hash 'log --pretty=format:"%h" -n 1'
-task_done "alias.hash"
+# Config
+# ------
+git_config 'user.name' 'Ashur Cabrera'
+git_config 'push.recurseSubmodules' 'check'
+git_config 'status.submoduleSummary' 'true'
+git_config 'alias.hist' 'log --pretty=oneline'
+git_config 'alias.hash' 'log --pretty=format:"%h" -n 1'
 
 echo
