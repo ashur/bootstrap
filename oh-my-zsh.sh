@@ -15,12 +15,8 @@ clone_repo "https://github.com/ashur/.zsh-custom" "$HOME/.zsh-custom" "~/.zsh-cu
 # ~/.zshrc
 # --------
 ZSHRC="$HOME/.zshrc"
-if [ ! -L $ZSHRC ]; then
-	task_doing "~/.zshrc" "Linking"
-	ln -s ./assets/oh-my-zsh/.zshrc $ZSHRC
-else
-	task_done "~/.zshrc" "already linked"
-fi
+cp ./assets/oh-my-zsh/.zshrc "${ZSHRC}"
+task_done "~/.zshrc" "Linking"
 
 # Set Shell
 # ---------
