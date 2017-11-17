@@ -1,6 +1,8 @@
 # --
-# Install apps using Cask, symlink to /Applications
+# Homebrew: Cask
 # --
+
+cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
 
 source ./assets/utils.sh
 header "Homebrew: Cask"

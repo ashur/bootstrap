@@ -1,6 +1,8 @@
-# cd to this directory to work relatively
-BOOTSTRAP=$(realpath $(dirname $0))
-cd $BOOTSTRAP
+# --
+# bootstrap
+# --
+
+cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
 
 ./macos.sh
 ./homebrew.sh

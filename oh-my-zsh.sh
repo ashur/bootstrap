@@ -2,6 +2,8 @@
 # oh-my-zsh
 # --
 
+cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
+
 source ./assets/utils.sh
 header "oh-my-zsh"
 
