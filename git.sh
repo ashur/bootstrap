@@ -18,6 +18,8 @@ function git_config()
 	task_done "${GIT_KEY}"
 }
 
+brew_install_formula "git"
+
 # Config
 # ------
 git_config 'user.name' 'Ashur Cabrera'
