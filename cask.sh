@@ -33,6 +33,7 @@ brew_tap_keg "caskroom/versions"
 
 install_cask 1password	"1Password 6"
 install_cask alfred		"Alfred 3"
+install_cask atom-beta	"Atom Beta"
 install_cask dropbox	"Dropbox"
 install_cask github		"Github Desktop"
 install_cask slack		"Slack"
