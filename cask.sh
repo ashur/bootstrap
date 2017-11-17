@@ -26,7 +26,6 @@ function install_cask()
 # Casks
 # -----
 install_cask github "Github Desktop"
-install_cask moom "Moom"
 install_cask alfred "Alfred"
 install_cask dropbox "Dropbox"
 install_cask 1password "1Password"
