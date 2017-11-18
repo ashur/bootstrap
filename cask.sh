@@ -37,5 +37,6 @@ install_cask atom-beta	"Atom Beta"
 install_cask dropbox	"Dropbox"
 install_cask github		"Github Desktop"
 install_cask slack		"Slack"
+install_cask spotify	"Spotify"
 
 echo
