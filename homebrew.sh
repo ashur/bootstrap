@@ -2,8 +2,6 @@
 # Homebrew
 # --
 
-cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
-
 source ./assets/utils.sh
 header "Homebrew"
 

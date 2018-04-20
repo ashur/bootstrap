@@ -2,8 +2,6 @@
 # bootstrap
 # --
 
-cd $(realpath $(dirname $0))	# Work relative to bootstrap directory
-
 ./macos.sh
 ./homebrew.sh
 ./git.sh
