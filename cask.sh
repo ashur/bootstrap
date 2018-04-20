@@ -34,6 +34,7 @@ install_cask alfred		"Alfred 3"
 install_cask atom-beta	"Atom Beta"
 install_cask dropbox	"Dropbox"
 install_cask github		"Github Desktop"
+install_cask moom		"Moom"
 install_cask slack		"Slack"
 install_cask spotify	"Spotify"
 
