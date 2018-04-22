@@ -40,6 +40,7 @@ task_done "Screenshot Drop Shadows" "disabled"
 # -----------
 make_directory "${HOME}/Bots"
 make_directory "${HOME}/Developer"
+make_directory "${HOME}/Screenshots"
 make_directory "${HOME}/Sites"
 
 echo
