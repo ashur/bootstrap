@@ -26,4 +26,6 @@ brew_tap_keg "ashur/pug"
 brew_install_formula "fig"
 brew_install_formula "pug"
 
+brew_install_formula "kryptco/tap/kr"
+
 echo
