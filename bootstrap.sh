@@ -8,4 +8,5 @@
 ./php.sh
 ./oh-my-zsh.sh
 ./cask.sh
+./fig.sh
 ./apm.sh
