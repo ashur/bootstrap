@@ -29,16 +29,17 @@ function install_cask()
 
 brew_tap_keg "caskroom/versions"
 
-install_cask 1password	"1Password 6"
-install_cask alfred		"Alfred 3"
-install_cask atom-beta	"Atom Beta"
-install_cask bartender	"Bartender 3"
-install_cask charles	"Charles"
-install_cask dash		"Dash"
-install_cask dropbox	"Dropbox"
-install_cask github		"Github Desktop"
-install_cask moom		"Moom"
-install_cask slack		"Slack"
-install_cask spotify	"Spotify"
+install_cask 1password		"1Password 6"
+install_cask alfred			"Alfred 3"
+install_cask atom-beta		"Atom Beta"
+install_cask bartender		"Bartender 3"
+install_cask charles		"Charles"
+install_cask dash			"Dash"
+install_cask dropbox		"Dropbox"
+install_cask fantastical	"Fantastical"
+install_cask github			"Github Desktop"
+install_cask moom			"Moom"
+install_cask slack			"Slack"
+install_cask spotify		"Spotify"
 
 echo
