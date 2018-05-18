@@ -39,7 +39,10 @@ install_cask dropbox		"Dropbox"
 install_cask fantastical	"Fantastical"
 install_cask github			"Github Desktop"
 install_cask moom			"Moom"
+install_cask paw			"Paw"
+install_cask sketch			"Sketch"
 install_cask slack			"Slack"
 install_cask spotify		"Spotify"
+install_cask vmware-fusion	"VMware Fusion"
 
 echo
