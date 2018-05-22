@@ -22,4 +22,8 @@ function fig_add()
 
 fig_add bootstrap git@github.com:ashur/fig-bootstrap.git
 
+# Sketch
+fig_add sketch git@github.com:ashur/fig-sketch.git
+fig deploy sketch/shortcuts
+
 echo
