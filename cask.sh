@@ -38,6 +38,7 @@ install_cask dash			"Dash"
 install_cask dropbox		"Dropbox"
 install_cask fantastical	"Fantastical"
 install_cask github			"Github Desktop"
+install_cask hazel			"Hazel"
 install_cask kaleidoscope	"Kaleidoscope"
 install_cask licecap		"LICEcap"
 install_cask moom			"Moom"
@@ -46,5 +47,3 @@ install_cask sketch			"Sketch"
 install_cask slack			"Slack"
 install_cask spotify		"Spotify"
 install_cask tower			"Tower"
-
-echo
