@@ -43,6 +43,6 @@ install_cask paw			"Paw"
 install_cask sketch			"Sketch"
 install_cask slack			"Slack"
 install_cask spotify		"Spotify"
-install_cask vmware-fusion	"VMware Fusion"
+install_cask visual-studio-code	"Visual Studio Code"
 
 echo
